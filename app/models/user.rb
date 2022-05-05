@@ -25,6 +25,10 @@ class User < ApplicationRecord
     followings.include?(user)
   end
   
+  def followers?(user)
+    followers.include?(user)
+  end
+  
   has_one_attached :profile_image
 
   validates :name, presence: true, length: { minimum: 2, maximum: 20 }, uniqueness: true
