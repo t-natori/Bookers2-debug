@@ -1,0 +1,4 @@
+$(".comments-area").html("<%= j(render "book_comments/comments", book: @book) %>");
+
+<!-- フォーム送信後フォームの値を空にする -->
+$("#form").val("");
