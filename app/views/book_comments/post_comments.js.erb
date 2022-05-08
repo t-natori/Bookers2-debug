@@ -1,4 +1,10 @@
+<!-- コメント数を非同期通信 -->
+$(".book_comment_count").html("<%= j(render "book_comments/count", book: @book) %>");
+
+<!-- コメント一覧の非同期通信 -->
 $(".comments-area").html("<%= j(render "book_comments/comments", book: @book) %>");
 
 <!-- フォーム送信後フォームの値を空にする -->
+<!-- "textarea"で指定すると"Opinion"も指定される -->
+<!-- '_form'で'text_area'に'id:"form"指定 -->
 $("#form").val("");
